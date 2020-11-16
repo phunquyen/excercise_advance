@@ -5,23 +5,23 @@ import org.apache.log4j.Logger;
 
 public class RandomNumberThread extends Thread {
     Logger logger = Logger.getLogger(RandomNumberThread.class);
-    RandomNumber randomNumber;
+    public static RandomNumber randomNumber1;
 
     public RandomNumberThread(RandomNumber randomNumber) {
-        this.randomNumber = randomNumber;
+        this.randomNumber1 = randomNumber;
     }
 
     @Override
     public void run() {
         int i = 1;
         do {
-            synchronized (randomNumber) {
-                randomNumber.randomNumberInteger = (int) (Math.random() * 10 + 1);
-                logger.info(String.format("Random so thu " + i + " la: " + randomNumber.randomNumberInteger));
-                randomNumber.notifyAll();
+            synchronized (WriteFileThread.randomNumber2) {
+                randomNumber1.number = (int) (Math.random() * 10 + 1);
+                logger.info(String.format("Random so thu " + i + " la: " + randomNumber1.number));
+                randomNumber1.notifyAll();
                 try {
                     Thread.sleep(1000);
-                    randomNumber.wait();
+                    randomNumber1.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                     logger.error(e);

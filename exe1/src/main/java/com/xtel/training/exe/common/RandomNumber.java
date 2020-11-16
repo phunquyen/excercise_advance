@@ -1,5 +1,5 @@
 package com.xtel.training.exe.common;
 
 public class RandomNumber {
-    public int randomNumberInteger = 0;
+    public int number = 0;
 }

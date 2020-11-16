@@ -3,11 +3,9 @@ package com.xtel.training.exe;
 import com.xtel.training.exe.common.RandomNumber;
 import com.xtel.training.exe.thread.RandomNumberThread;
 import com.xtel.training.exe.thread.WriteFileThread;
-
 import java.util.Scanner;
 
 public class MainApplication {
-
     public static void main(String[] args) {
         RandomNumber randomNumber = new RandomNumber();
         RandomNumberThread tRandomNumber = new RandomNumberThread(randomNumber);
@@ -21,7 +19,8 @@ public class MainApplication {
         String stop = sc.nextLine();
 
         do {
-            System.exit(0);
+            tRandomNumber.stop();
+            tWriteFile.stop();
         } while (stop.equals("stop"));
     }
 }
