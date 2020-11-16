@@ -1,16 +1,12 @@
-package com.xtel.training.exe;
+package com.xtel.training.exe.chat;
+import java.net.*;
+import java.io.*;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.net.Socket;
-
-public class MyClient {
+public class ChatClient {
     public static void main(String args[]) throws Exception {
-        Socket s = new Socket("localhost", 3333);
-        DataInputStream din = new DataInputStream(s.getInputStream());
-        DataOutputStream dout = new DataOutputStream(s.getOutputStream());
+        Socket socket = new Socket("localhost", 3333);
+        DataInputStream din = new DataInputStream(socket.getInputStream());
+        DataOutputStream dout = new DataOutputStream(socket.getOutputStream());
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String str = "", str2 = "";
@@ -22,6 +18,6 @@ public class MyClient {
             System.out.println("Server says: " + str2);
         }
         dout.close();
-        s.close();
+        socket.close();
     }
 }
