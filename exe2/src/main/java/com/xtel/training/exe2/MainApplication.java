@@ -22,6 +22,7 @@ public class MainApplication extends Thread{
                 logger.error(e);
             }
             count ++;
+//            Thread.currentThread().sleep(1000*6000*n);
         } while (true);
     }
 
