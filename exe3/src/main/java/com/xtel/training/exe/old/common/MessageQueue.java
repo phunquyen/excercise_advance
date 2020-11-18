@@ -1,15 +1,17 @@
-package com.xtel.training.exe.common;
+package com.xtel.training.exe.old.common;
 
 import org.apache.log4j.Logger;
 
-public class MessageQueue {
+import java.util.LinkedList;
+
+public class MessageQueue<T> {
     Logger logger = Logger.getLogger(MessageQueue.class);
 
-    private int content;
+    private LinkedList<T> content = new LinkedList<T>();
     private boolean available = false;
 
-    public synchronized int get() {
-        while (available == false) {
+    public synchronized T get() {
+        while (!available ) {
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -19,11 +21,11 @@ public class MessageQueue {
         }
         available = false;
         notifyAll();
-        return content;
+        return content.getLast();
     }
 
-    public synchronized void put (int value) {
-        while (available == true) {
+    public synchronized void put (T value) {
+        while (available) {
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -31,7 +33,7 @@ public class MessageQueue {
                 logger.error(e);
             }
         }
-        content = value;
+        content.addFirst(value);
         available = true;
         notifyAll();
     }

@@ -1,6 +1,6 @@
-package com.xtel.training.exe.thread;
+package com.xtel.training.exe.old.thread;
 
-import com.xtel.training.exe.common.MessageQueue;
+import com.xtel.training.exe.old.common.MessageQueue;
 
 public class ConsumerThread extends Thread {
     private MessageQueue msg;
@@ -12,7 +12,7 @@ public class ConsumerThread extends Thread {
     public void run() {
         int value = 0;
         for (int i = 0; i < 10; i++) {
-            value = msg.get();
+//            value = msg.get();
             System.out.println("Consumer #" + this.number + " got: " + value);
         }
     }

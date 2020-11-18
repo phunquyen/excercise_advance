@@ -1,6 +1,6 @@
-package com.xtel.training.exe.thread;
+package com.xtel.training.exe.old.thread;
 
-import com.xtel.training.exe.common.MessageQueue;
+import com.xtel.training.exe.old.common.MessageQueue;
 
 public class ProducerThread extends Thread {
     private MessageQueue msg;

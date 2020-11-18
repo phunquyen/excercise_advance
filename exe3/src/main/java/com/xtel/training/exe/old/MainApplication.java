@@ -1,8 +1,8 @@
-package com.xtel.training.exe;
+package com.xtel.training.exe.old;
 
-import com.xtel.training.exe.common.MessageQueue;
-import com.xtel.training.exe.thread.ConsumerThread;
-import com.xtel.training.exe.thread.ProducerThread;
+import com.xtel.training.exe.old.common.MessageQueue;
+import com.xtel.training.exe.old.thread.ConsumerThread;
+import com.xtel.training.exe.old.thread.ProducerThread;
 
 
 public class MainApplication {
