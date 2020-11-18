@@ -1,21 +1,21 @@
 package com.xtel.training.exe.newexe;
 
-import java.util.concurrent.ThreadLocalRandom;
+import org.apache.log4j.Logger;
 
-public class Consumer implements Runnable {
-
+public class Consumer extends Thread {
+    Logger logger = Logger.getLogger(Consumer.class);
     private final BlockingQueue<Integer> queue;
 
     Consumer(BlockingQueue<Integer> queue) {
         this.queue = queue;
     }
-
     public void run() {
         try {
             while (true) {
+                logger.info("take from queue");
                 queue.take();
-                System.out.println("Consumed resource - Queue size() = " + queue.size());
-                Thread.sleep(ThreadLocalRandom.current().nextInt(50, 300)); // simulate time passing
+                System.out.println("Consumed - Queue size() = " + queue.size());
+                Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

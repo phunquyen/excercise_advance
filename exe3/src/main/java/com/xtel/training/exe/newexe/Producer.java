@@ -1,9 +1,11 @@
 package com.xtel.training.exe.newexe;
 
+import org.apache.log4j.Logger;
+
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Producer implements Runnable {
-
+public class Producer extends Thread {
+    Logger logger = Logger.getLogger(Producer.class);
     private final BlockingQueue<Integer> queue;
 
     Producer(BlockingQueue<Integer> queue) {
@@ -13,8 +15,9 @@ public class Producer implements Runnable {
     public void run() {
         try {
             while (true) {
+                logger.info("put to queue");
                 queue.put(produce());
-                System.out.println("Produced resource - Queue size() = "  + queue.size());
+                System.out.println("Produced - Queue size() = "  + queue.size());
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -22,7 +25,7 @@ public class Producer implements Runnable {
     }
 
     private Integer produce() throws InterruptedException {
-        Thread.sleep(50); // simulate time to produce the data
-        return ThreadLocalRandom.current().nextInt(1, 100);
+        Thread.sleep(100);
+        return ThreadLocalRandom.current().nextInt(1, 10);
     }
 }
