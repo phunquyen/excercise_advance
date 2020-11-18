@@ -2,7 +2,7 @@ package com.xtel.training.exe.newexe;
 
 import org.apache.log4j.Logger;
 
-public class Consumer extends Thread {
+public class Consumer extends AbsThread {
     Logger logger = Logger.getLogger(Consumer.class);
     private final BlockingQueue<Integer> queue;
 
