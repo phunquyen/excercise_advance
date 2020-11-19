@@ -79,26 +79,10 @@ public abstract class BlockingQueue<T> extends Thread{
             this.takeLock.notifyAll();
         }
     }
-//    public void notifyPut(){
-//        synchronized (this.putLock){
-//            this.putLock.notifyAll();
-//        }
-//    }
-//
-//    public void notifyTake(){
-//        synchronized (this.takeLock){
-//            this.takeLock.notifyAll();
-//        }
-//    }
 
-    public void waitPut(long delay) throws InterruptedException {
+    public void waitMe(long delay) throws InterruptedException {
         synchronized (this.putLock){
             this.putLock.wait(delay);
-        }
-    }
-    public void waitTake(long delay) throws InterruptedException {
-        synchronized (this.takeLock){
-            this.takeLock.wait(delay);
         }
     }
 
@@ -108,19 +92,6 @@ public abstract class BlockingQueue<T> extends Thread{
             notifyMe();
         }
     }
-//    public void killPut() {
-//        this.running = false;
-//        while (this.isAlive()){
-//            notifyPut();
-//        }
-//    }
-//
-//    public void killTake() {
-//        this.running = false;
-//        while (this.isAlive()){
-//            notifyTake();
-//        }
-//    }
 
     public static void killAllThread(){
         for (BlockingQueue thread : threads) {
