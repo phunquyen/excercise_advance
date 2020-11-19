@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class BlockingQueue<T> extends Thread{
     Logger logger = Logger.getLogger(BlockingQueue.class);
-    protected static final int capacity = 10;
+    protected static int capacity = 10;
     protected final LinkedList<T> items = new LinkedList<>();
     protected static List<BlockingQueue> threads = Collections.synchronizedList(new ArrayList<BlockingQueue>());
     protected final Object putLock = new Object();
@@ -48,7 +48,7 @@ public abstract class BlockingQueue<T> extends Thread{
     public void run(){
         while (running){
             try{
-                Thread.sleep(10);
+                Thread.sleep(1000);
                 doSomething();
             }
             catch (Exception e){
@@ -82,24 +82,24 @@ public abstract class BlockingQueue<T> extends Thread{
 
     public void notifyPut(){
         synchronized (this.putLock){
-            this.putLock.notifyAll();
+            this.putLock.notify();
         }
     }
 
     public void notifyTake(){
         synchronized (this.takeLock){
-            this.takeLock.notifyAll();
+            this.takeLock.notify();
         }
     }
 
-    public void waitPut() throws InterruptedException {
+    public void waitPut(long delay) throws InterruptedException {
         synchronized (this.putLock){
-            this.putLock.wait();
+            this.putLock.wait(delay);
         }
     }
-    public void waitTake() throws InterruptedException {
+    public void waitTake(long delay) throws InterruptedException {
         synchronized (this.takeLock){
-            this.takeLock.wait();
+            this.takeLock.wait(delay);
         }
     }
 
@@ -113,7 +113,7 @@ public abstract class BlockingQueue<T> extends Thread{
     public void killTake() {
         this.running = false;
         while (this.isAlive()){
-            notifyPut();
+            notifyTake();
         }
     }
 

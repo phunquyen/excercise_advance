@@ -153,3 +153,24 @@
 2020-11-18 17:25:49 INFO  Producer:18 - put to queue
 2020-11-18 17:25:49 INFO  Producer:18 - put to queue
 2020-11-18 17:25:49 WARN  BlockingQueue:16 - Queue is full
+2020-11-19 10:26:53 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 10:26:53 DEBUG BlockingQueue:75 - Thread Producer is stopped !
+2020-11-19 10:26:53 DEBUG BlockingQueue:75 - Thread Consumer is stopped !
+2020-11-19 10:41:49 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 10:41:49 DEBUG BlockingQueue:75 - Thread Producer is stopped !
+2020-11-19 10:41:49 DEBUG BlockingQueue:75 - Thread Consumer is stopped !
+2020-11-19 10:42:26 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 10:42:26 DEBUG BlockingQueue:75 - Thread Producer is stopped !
+2020-11-19 10:42:27 DEBUG BlockingQueue:75 - Thread Consumer is stopped !
+2020-11-19 10:44:22 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 10:44:22 DEBUG BlockingQueue:75 - Thread Producer is stopped !
+2020-11-19 10:44:23 DEBUG BlockingQueue:75 - Thread Consumer is stopped !
+2020-11-19 10:49:02 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 10:49:02 DEBUG BlockingQueue:75 - Thread Producer is stopped !
+2020-11-19 10:49:03 DEBUG BlockingQueue:75 - Thread Consumer is stopped !
+2020-11-19 10:52:59 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 10:52:59 DEBUG BlockingQueue:82 - Thread Producer is stopped !
+2020-11-19 10:53:00 DEBUG BlockingQueue:82 - Thread Consumer is stopped !
+2020-11-19 10:55:49 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 10:55:49 DEBUG BlockingQueue:81 - Thread Producer is stopped !
+2020-11-19 10:55:49 DEBUG BlockingQueue:81 - Thread Consumer is stopped !
