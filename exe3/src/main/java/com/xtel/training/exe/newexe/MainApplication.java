@@ -3,11 +3,11 @@ package com.xtel.training.exe.newexe;
 public class MainApplication {
 
     public static void main(String[] args) throws InterruptedException {
-        BlockingQueue<Integer> queueBuffer = new BlockingQueue<>();
 
-        Producer producer = new Producer(queueBuffer);
-        Consumer consumer = new Consumer(queueBuffer);
-
+        Producer producer = new Producer();
+        producer.setName("Producer");
+        Consumer consumer = new Consumer();
+        consumer.setName("Consumer");
         producer.start();
         consumer.start();
 

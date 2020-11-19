@@ -2,19 +2,14 @@ package com.xtel.training.exe.newexe;
 
 import org.apache.log4j.Logger;
 
-public class Consumer extends AbsThread {
-    Logger logger = Logger.getLogger(Consumer.class);
-    private final BlockingQueue<Integer> queue;
-
-    Consumer(BlockingQueue<Integer> queue) {
-        this.queue = queue;
-    }
+public class Consumer extends BlockingQueue {
+    Consumer consumer;
     public void run() {
         try {
             while (true) {
                 logger.info("take from queue");
-                queue.take();
-                System.out.println("Consumed - Queue size() = " + queue.size());
+                take();
+                System.out.println("Consumed - Queue size() = " + size());
                 Thread.sleep(1000);
             }
         } catch (InterruptedException e) {

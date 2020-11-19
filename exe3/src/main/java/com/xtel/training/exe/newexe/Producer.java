@@ -4,14 +4,7 @@ import org.apache.log4j.Logger;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Producer extends AbsThread {
-    Logger logger = Logger.getLogger(Producer.class);
-    private final BlockingQueue<Integer> queue;
-
-    Producer(BlockingQueue<Integer> queue) {
-        this.queue = queue;
-    }
-
+public class Producer extends BlockingQueue {
     public void run() {
         try {
             while (true) {
