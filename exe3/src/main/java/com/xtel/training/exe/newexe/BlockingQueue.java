@@ -45,9 +45,17 @@ public abstract class BlockingQueue<T> extends Thread{
         return value;
     }
 
+    public void start(){
+        running = true;
+        super.start();
+        logger.debug(String.format("Thread %s is started !", this.getName()));
+        threads.add(this);
+    }
+
     public void run(){
         while (running){
             try{
+                logger.info("running...");
                 Thread.sleep(1000);
                 doSomething();
             }

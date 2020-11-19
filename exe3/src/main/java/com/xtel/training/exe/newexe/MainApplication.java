@@ -17,10 +17,10 @@ public class MainApplication {
 
         producer.setConsumer(consumer);
         consumer.setProducer(producer);
-
         producer.start();
         Thread.sleep(100);
         consumer.start();
+        System.out.println("123");
 
         String stop;
         do{

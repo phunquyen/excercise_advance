@@ -174,3 +174,23 @@
 2020-11-19 10:55:49 DEBUG MainApplication:10 - Application is started ... !
 2020-11-19 10:55:49 DEBUG BlockingQueue:81 - Thread Producer is stopped !
 2020-11-19 10:55:49 DEBUG BlockingQueue:81 - Thread Consumer is stopped !
+2020-11-19 16:08:03 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:08:03 DEBUG BlockingQueue:74 - Thread Producer is stopped !
+2020-11-19 16:08:03 DEBUG BlockingQueue:74 - Thread Consumer is stopped !
+2020-11-19 16:11:41 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:11:41 DEBUG BlockingQueue:75 - Thread Producer is stopped !
+2020-11-19 16:11:41 DEBUG BlockingQueue:75 - Thread Consumer is stopped !
+2020-11-19 16:13:12 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:13:12 DEBUG BlockingQueue:75 - Thread Producer is stopped !
+2020-11-19 16:13:12 DEBUG BlockingQueue:75 - Thread Consumer is stopped !
+2020-11-19 16:13:33 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:13:33 DEBUG BlockingQueue:75 - Thread Producer is stopped !
+2020-11-19 16:13:33 DEBUG BlockingQueue:75 - Thread Consumer is stopped !
+2020-11-19 16:20:16 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:20:16 INFO  BlockingQueue:58 - running...
+2020-11-19 16:20:16 DEBUG BlockingQueue:51 - Thread Producer is started !
+2020-11-19 16:20:17 DEBUG BlockingQueue:51 - Thread Consumer is started !
+2020-11-19 16:20:17 INFO  BlockingQueue:58 - running...
+2020-11-19 16:20:17 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:20:18 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:20:18 WARN  BlockingQueue:34 - Queue is empty
