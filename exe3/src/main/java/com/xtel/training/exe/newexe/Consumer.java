@@ -7,7 +7,7 @@ public class Consumer extends BlockingQueue {
         logger.info("take from queue");
         take();
         System.out.println("Consumed - Queue size() = " + size());
-        producer.notifyTake();
+        producer.notifyMe();
     }
 
     public void setProducer(Producer producer) {

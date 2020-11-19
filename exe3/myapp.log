@@ -194,3 +194,140 @@
 2020-11-19 16:20:17 INFO  BlockingQueue:10 - put to queue
 2020-11-19 16:20:18 INFO  BlockingQueue:7 - take from queue
 2020-11-19 16:20:18 WARN  BlockingQueue:34 - Queue is empty
+2020-11-19 16:22:39 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:22:39 INFO  BlockingQueue:58 - running...
+2020-11-19 16:22:39 DEBUG BlockingQueue:51 - Thread Producer is started !
+2020-11-19 16:22:39 DEBUG BlockingQueue:51 - Thread Consumer is started !
+2020-11-19 16:22:39 INFO  BlockingQueue:58 - running...
+2020-11-19 16:22:40 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:22:40 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:22:40 WARN  BlockingQueue:34 - Queue is empty
+2020-11-19 16:23:43 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:23:43 INFO  BlockingQueue:58 - running...
+2020-11-19 16:23:43 DEBUG BlockingQueue:51 - Thread Producer is started !
+2020-11-19 16:23:43 DEBUG BlockingQueue:51 - Thread Consumer is started !
+2020-11-19 16:23:43 INFO  BlockingQueue:58 - running...
+2020-11-19 16:23:44 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:23:44 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:23:44 WARN  BlockingQueue:34 - Queue is empty
+2020-11-19 16:24:32 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:24:32 INFO  BlockingQueue:58 - running...
+2020-11-19 16:24:32 DEBUG BlockingQueue:51 - Thread Producer is started !
+2020-11-19 16:24:32 DEBUG BlockingQueue:51 - Thread Consumer is started !
+2020-11-19 16:24:32 INFO  BlockingQueue:58 - running...
+2020-11-19 16:24:33 INFO  BlockingQueue:11 - put to queue
+2020-11-19 16:24:33 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:24:33 WARN  BlockingQueue:34 - Queue is empty
+2020-11-19 16:28:17 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:28:17 INFO  BlockingQueue:58 - running...
+2020-11-19 16:28:17 DEBUG BlockingQueue:51 - Thread Producer is started !
+2020-11-19 16:28:17 DEBUG BlockingQueue:51 - Thread Consumer is started !
+2020-11-19 16:28:17 INFO  BlockingQueue:58 - running...
+2020-11-19 16:28:18 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:28:18 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:28:18 WARN  BlockingQueue:34 - Queue is empty
+2020-11-19 16:35:00 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:35:00 INFO  BlockingQueue:57 - running...
+2020-11-19 16:35:00 DEBUG BlockingQueue:50 - Thread Producer is started !
+2020-11-19 16:35:00 DEBUG BlockingQueue:50 - Thread Consumer is started !
+2020-11-19 16:35:00 INFO  BlockingQueue:57 - running...
+2020-11-19 16:35:01 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:35:01 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:35:01 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:35:21 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:35:21 INFO  BlockingQueue:57 - running...
+2020-11-19 16:35:21 DEBUG BlockingQueue:50 - Thread Producer is started !
+2020-11-19 16:35:21 DEBUG BlockingQueue:50 - Thread Consumer is started !
+2020-11-19 16:35:21 INFO  BlockingQueue:57 - running...
+2020-11-19 16:35:22 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:35:22 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:35:22 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:35:51 DEBUG BlockingQueue:81 - Thread Producer is stopped !
+2020-11-19 16:35:51 ERROR BlockingQueue:62 - 
+java.util.NoSuchElementException
+	at java.util.LinkedList.removeLast(LinkedList.java:283)
+	at com.xtel.training.exe.newexe.BlockingQueue.take(BlockingQueue.java:39)
+	at com.xtel.training.exe.newexe.Consumer.doSomething(Consumer.java:8)
+	at com.xtel.training.exe.newexe.BlockingQueue.run(BlockingQueue.java:59)
+2020-11-19 16:35:51 DEBUG BlockingQueue:81 - Thread Consumer is stopped !
+2020-11-19 16:40:32 DEBUG MainApplication:10 - Application is started ... !
+2020-11-19 16:40:32 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:32 DEBUG BlockingQueue:50 - Thread Producer is started !
+2020-11-19 16:40:32 DEBUG BlockingQueue:50 - Thread Consumer is started !
+2020-11-19 16:40:32 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:33 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:33 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:33 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:40:33 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:40:34 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:34 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:34 ERROR BlockingQueue:62 - 
+java.util.NoSuchElementException
+	at java.util.LinkedList.removeLast(LinkedList.java:283)
+	at com.xtel.training.exe.newexe.BlockingQueue.take(BlockingQueue.java:39)
+	at com.xtel.training.exe.newexe.Consumer.doSomething(Consumer.java:8)
+	at com.xtel.training.exe.newexe.BlockingQueue.run(BlockingQueue.java:59)
+2020-11-19 16:40:34 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:35 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:35 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:40:35 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:40:35 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:36 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:36 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:36 ERROR BlockingQueue:62 - 
+java.util.NoSuchElementException
+	at java.util.LinkedList.removeLast(LinkedList.java:283)
+	at com.xtel.training.exe.newexe.BlockingQueue.take(BlockingQueue.java:39)
+	at com.xtel.training.exe.newexe.Consumer.doSomething(Consumer.java:8)
+	at com.xtel.training.exe.newexe.BlockingQueue.run(BlockingQueue.java:59)
+2020-11-19 16:40:36 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:37 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:40:37 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:40:37 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:37 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:37 ERROR BlockingQueue:62 - 
+java.util.NoSuchElementException
+	at java.util.LinkedList.removeLast(LinkedList.java:283)
+	at com.xtel.training.exe.newexe.BlockingQueue.take(BlockingQueue.java:39)
+	at com.xtel.training.exe.newexe.Consumer.doSomething(Consumer.java:8)
+	at com.xtel.training.exe.newexe.BlockingQueue.run(BlockingQueue.java:59)
+2020-11-19 16:40:37 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:38 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:38 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:40:38 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:40:38 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:39 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:39 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:39 ERROR BlockingQueue:62 - 
+java.util.NoSuchElementException
+	at java.util.LinkedList.removeLast(LinkedList.java:283)
+	at com.xtel.training.exe.newexe.BlockingQueue.take(BlockingQueue.java:39)
+	at com.xtel.training.exe.newexe.Consumer.doSomething(Consumer.java:8)
+	at com.xtel.training.exe.newexe.BlockingQueue.run(BlockingQueue.java:59)
+2020-11-19 16:40:39 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:40 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:40:40 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:40:40 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:40 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:40 ERROR BlockingQueue:62 - 
+java.util.NoSuchElementException
+	at java.util.LinkedList.removeLast(LinkedList.java:283)
+	at com.xtel.training.exe.newexe.BlockingQueue.take(BlockingQueue.java:39)
+	at com.xtel.training.exe.newexe.Consumer.doSomething(Consumer.java:8)
+	at com.xtel.training.exe.newexe.BlockingQueue.run(BlockingQueue.java:59)
+2020-11-19 16:40:40 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:41 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:40:41 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:40:41 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:41 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:41 ERROR BlockingQueue:62 - 
+java.util.NoSuchElementException
+	at java.util.LinkedList.removeLast(LinkedList.java:283)
+	at com.xtel.training.exe.newexe.BlockingQueue.take(BlockingQueue.java:39)
+	at com.xtel.training.exe.newexe.Consumer.doSomething(Consumer.java:8)
+	at com.xtel.training.exe.newexe.BlockingQueue.run(BlockingQueue.java:59)
+2020-11-19 16:40:41 INFO  BlockingQueue:57 - running...
+2020-11-19 16:40:42 INFO  BlockingQueue:10 - put to queue
+2020-11-19 16:40:42 INFO  BlockingQueue:7 - take from queue
+2020-11-19 16:40:42 WARN  BlockingQueue:33 - Queue is empty
+2020-11-19 16:40:42 INFO  BlockingQueue:57 - running...

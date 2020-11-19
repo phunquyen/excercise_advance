@@ -20,7 +20,6 @@ public class MainApplication {
         producer.start();
         Thread.sleep(100);
         consumer.start();
-        System.out.println("123");
 
         String stop;
         do{

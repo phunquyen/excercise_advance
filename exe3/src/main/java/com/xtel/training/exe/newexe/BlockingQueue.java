@@ -1,7 +1,6 @@
 package com.xtel.training.exe.newexe;
 
 import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -62,22 +61,6 @@ public abstract class BlockingQueue<T> extends Thread{
             catch (Exception e){
                 logger.error("",e);
             }
-            finally {
-                synchronized (putLock){
-                    try {
-                        putLock.wait();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                synchronized (takeLock){
-                    try {
-                        takeLock.wait();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
         }
         logger.debug(String.format("Thread %s is stopped !", this.getName()));
     }
@@ -88,17 +71,25 @@ public abstract class BlockingQueue<T> extends Thread{
         return items.size();
     }
 
-    public void notifyPut(){
+    public void notifyMe(){
         synchronized (this.putLock){
-            this.putLock.notify();
+            this.putLock.notifyAll();
         }
-    }
-
-    public void notifyTake(){
         synchronized (this.takeLock){
-            this.takeLock.notify();
+            this.takeLock.notifyAll();
         }
     }
+//    public void notifyPut(){
+//        synchronized (this.putLock){
+//            this.putLock.notifyAll();
+//        }
+//    }
+//
+//    public void notifyTake(){
+//        synchronized (this.takeLock){
+//            this.takeLock.notifyAll();
+//        }
+//    }
 
     public void waitPut(long delay) throws InterruptedException {
         synchronized (this.putLock){
@@ -111,24 +102,29 @@ public abstract class BlockingQueue<T> extends Thread{
         }
     }
 
-    public void killPut() {
+    public void killMe(){
         this.running = false;
         while (this.isAlive()){
-            notifyPut();
+            notifyMe();
         }
     }
-
-    public void killTake() {
-        this.running = false;
-        while (this.isAlive()){
-            notifyTake();
-        }
-    }
+//    public void killPut() {
+//        this.running = false;
+//        while (this.isAlive()){
+//            notifyPut();
+//        }
+//    }
+//
+//    public void killTake() {
+//        this.running = false;
+//        while (this.isAlive()){
+//            notifyTake();
+//        }
+//    }
 
     public static void killAllThread(){
         for (BlockingQueue thread : threads) {
-            thread.killPut();
-            thread.killTake();
+            thread.killMe();
         }
         System.err.println("Stopped all thread !!!");
     }

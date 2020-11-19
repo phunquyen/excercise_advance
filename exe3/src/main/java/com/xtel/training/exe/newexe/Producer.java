@@ -10,7 +10,7 @@ public class Producer extends BlockingQueue {
         logger.info("put to queue");
         put(rd.nextInt(10));
         System.out.println("Produced - Queue size() = "  + size());
-        consumer.notifyPut();
+        consumer.notifyMe();
     }
 
     public void setConsumer(Consumer consumer) {
